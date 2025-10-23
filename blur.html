@@ -1,0 +1,212 @@
+
+
+<html lang="en">
+<head>
+  <meta name="naver-site-verification" content="c38b0460365da148eff7418479ebd78167805944" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6237171158673362"
+     crossorigin="anonymous"></script>
+<style>
+    .icon-link img {
+        transition: transform 0.3s ease-in-out;
+    }
+    .icon-link:hover img {
+        transform: scale(1.1);
+    }
+</style>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+<style>
+.banner-icon a,
+.banner-icon a:link,
+.banner-icon a:visited,
+.banner-icon a:hover,
+.banner-icon a:active {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+}
+
+.banner-icon a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+}
+</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5B5LK9E72"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J5B5LK9E72');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur Background of Image Online (Free) - Imagetool</title>
+    <meta name="description" content="Instantly blur the background of any photo online. Create a professional portrait or DSLR-like depth of field effect for free. Make your subject stand out.">
+    <meta name="keywords" content="background blur, blur image, online photo editor, depth of field">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<!-- (공통) 기능-외부 라이브러리 -->
+<link  rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"   defer></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"         defer></script>
+
+<!-- 여러분의 통합 script -->
+<script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+<a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Imagetool</h1>
+                                        </a>
+                    <span>Professional Image Tools</span>
+                </div>
+               <ul class="nav-menu">
+          <li><a href="resizer.html">Image Resizer</a></li>
+          <li><a href="compressor.html">Image Compressor</a></li>
+          <li><a href="crop.html">Crop Tool</a></li>
+          <li><a href="ocr.html">Image to Text</a></li>
+          <li><a href="colorpicker.html">Color Picker</a></li>
+          <li><a href="blur.html">Blur Background</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+  <section class="tool-section active">
+    <div class="tool-container">
+      <h2>Blur Background</h2>
+
+      <div class="upload-area" id="blur-upload">
+        <p>Click or drag image to blur</p>
+        <input type="file" id="blur-input" accept="image/*">
+      </div>
+
+      <div class="controls" style="margin-top:20px;">
+        <label>
+          Blur:
+          <input type="range" id="blur-intensity" min="0" max="30" value="10">
+        </label>
+        <span id="blur-value">10px</span>
+        <button onclick="blurImage()" class="process-btn" style="margin-left:10px;">
+          Blur Background
+        </button>
+      </div>
+
+      <canvas id="blur-canvas"
+              style="display:none;margin:20px auto;max-width:100%;">
+      </canvas>
+
+      <div id="blur-result" style="margin-top:20px;"></div>
+    </div>
+  </section>
+</main>
+<!-- 콘텐츠 시작: 이 부분을 <main> 태그 바로 다음에 붙여넣으세요 -->
+<section class="content-section" style="padding: 20px 0; font-family: sans-serif;">
+    <div class="tool-container" style="max-width: 800px; margin: 0 auto; padding: 0 15px;">
+        <h3 style="text-align: center; font-size: 2em; margin-bottom: 30px; color: #2c3e50;">
+            Create Professional Portraits by Blurring Image Backgrounds
+        </h3>
+        
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                Get That "Portrait Mode" Look on Any Photo
+            </h4>
+            <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                You don't need an expensive DSLR camera to create stunning photos with a beautifully blurred background. This effect, often called "bokeh" or "depth of field," helps your main subject pop and eliminates distracting backgrounds. Our Background Blur tool lets you apply this professional-looking effect to any image, making it perfect for portraits, product photos, or just making your pictures stand out on social media.
+            </p>
+        </article>
+        
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                When to Use a Blur Effect
+            </h4>
+            <ul style="list-style-type: none; padding: 0; line-height: 1.8; color: #333;">
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #007bff;">
+                    <strong>Emphasize a Subject:</strong> Blur the background to draw all the attention to a person, pet, or object in the foreground.
+                </li>
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #28a745;">
+                    <strong>Hide a Messy Background:</strong> Quickly clean up a photo by blurring out clutter or unwanted details in the background.
+                </li>
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #dc3545;">
+                    <strong>Protect Privacy:</strong> Easily blur out sensitive information, faces, or license plates in an image before sharing it online.
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                How to Control the Blur Intensity
+            </h4>
+            <div style="border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+                <p><strong>Using the "Blur Radius" Slider:</strong></p>
+                <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                   Our tool features a simple slider to control the strength of the blur effect.
+                </p>
+                 <ul style="line-height: 1.8; color: #333; font-size: 1.1em; padding-left: 20px;">
+                    <li>A <strong>lower value</strong> (e.g., 2-5px) creates a subtle, natural-looking blur.</li>
+                    <li>A <strong>higher value</strong> (e.g., 10-20px) produces a very strong, artistic blur that can completely obscure the background.</li>
+                </ul>
+                <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                   Experiment with different values to find the perfect look for your photo.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- 콘텐츠 끝 -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Imagetool</h3>
+                <p>Professional image processing tools for everyone. Fast, secure, and free to use.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="resizer.html">Image Resizer</a></li>
+                    <li><a href="compressor.html">Image Compressor</a></li>
+                    <li><a href="crop.html">Crop Tool</a></li>
+                    <li><a href="ocr.html">Image to Text</a></li>
+                    <li><a href="colorpicker.html">Color Picker</a></li>
+                    <li><a href="blur.html">Blur Background</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imagetool. All rights reserved. | <a href="https://imagetool.info">imagetool.info</a></p>
+        </div>
+    </footer>
+  
+</body>
+</html>

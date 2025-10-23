@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="naver-site-verification" content="c38b0460365da148eff7418479ebd78167805944" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6237171158673362"
+     crossorigin="anonymous"></script>
+    <style>
+        .icon-link img { transition: transform 0.3s ease-in-out; }
+        .icon-link:hover img { transform: scale(1.1); }
+        img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+        .banner-icon a, .banner-icon a:link, .banner-icon a:visited, .banner-icon a:hover, .banner-icon a:active { text-decoration: none !important; border: none !important; outline: none !important; background: none !important; }
+        .banner-icon a { display: inline-block; vertical-align: middle; line-height: 0; }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5B5LK9E72"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J5B5LK9E72');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO 최적화된 타이틀 -->
+    <title>Free Image Resizer: Resize Photos Online - Imagetool</title>
+    <!-- SEO 최적화된 설명 -->
+    <meta name="description" content="Resize images online for free with Imagetool. Adjust dimensions for social media, web, and print in seconds. High-quality results, fast and easy to use.">
+    <meta name="keywords" content="image resizer, resize image, photo resize, online photo editor">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<script src="script.js?ver=20251016"defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>Imagetool</h1>
+                    </a>
+                    <span>Professional Image Tools</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="resizer.html">Image Resizer</a></li>
+                    <li><a href="compressor.html">Image Compressor</a></li>
+                    <li><a href="crop.html">Crop Tool</a></li>
+                    <li><a href="ocr.html">Image to Text</a></li>
+                    <li><a href="colorpicker.html">Color Picker</a></li>
+                    <li><a href="blur.html">Blur Background</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="resizer" class="tool-section active">
+            <div class="tool-container">
+                <h2>Image Resizer</h2>
+                <p class="tool-description">Our advanced image resizer allows you to modify image dimensions while preserving quality using sophisticated algorithms. Whether you need to resize images for web optimization, social media posts, or print materials, our tool maintains the aspect ratio and visual integrity of your images. Perfect for photographers, web developers, and content creators who need precise control over image dimensions for various platforms and applications.</p>
+                <div class="tool-interface">
+                    <div class="upload-area" id="resizer-upload">
+                        <p>Click or drag image here to resize</p>
+                        <!-- input 태그가 display:none 이 아니어야 합니다. css에서 숨겨져 있을 수 있습니다. -->
+                        <input type="file" id="resizer-input" accept="image/*">
+                    </div>
+                    <div class="controls">
+                        <label>Width: <input type="number" id="resize-width" placeholder="800"></label>
+                        <label>Height: <input type="number" id="resize-height" placeholder="600"></label>
+                        <span id="resize-percentage" style="margin-left: 10px; font-weight: bold; color: #007bff;"></span>
+                        <label><input type="checkbox" id="maintain-ratio" checked> Maintain aspect ratio</label>
+                        <button onclick="resizeImage()" class="process-btn">Resize Image</button>
+                    </div>
+                    <canvas id="resizer-canvas" style="display:none;"></canvas>
+                    <div id="resizer-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 콘텐츠 시작 -->
+    <section class="content-section" style="padding: 20px 0; font-family: sans-serif;">
+        <div class="tool-container" style="max-width: 800px; margin: 0 auto; padding: 0 15px;">
+            <h3 style="text-align: center; font-size: 2em; margin-bottom: 30px; color: #2c3e50;">
+                The Ultimate Image Resizer Guide: Optimize for Web, Social Media & Print
+            </h3>
+            <article>
+                <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                    Why Should You Resize an Image?
+                </h4>
+                <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                    In the digital world, large images are the primary cause of slow-loading websites, leading to a poor user experience. Furthermore, every platform—from Instagram and blogs to online portfolios—has its own optimal image dimensions. Resizing images correctly ensures they load quickly and display perfectly everywhere.
+                </p>
+                <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                    <strong>Pro Tip:</strong> For maximum file size reduction, resize your image's dimensions first, then compress it. If your image file is still too large after resizing, use our <a href="compressor.html" style="color: #007bff; text-decoration: underline; font-weight: bold;">Image Compressor</a> tool to make it even smaller without losing significant quality. Your website's performance will thank you.
+                </p>
+            </article>
+            <article>
+                <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                    Recommended Image Dimensions by Platform
+                </h4>
+                <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                    Not sure what size to choose? Here's a quick cheat sheet with the most common dimensions for popular platforms.
+                </p>
+                <ul style="list-style-type: none; padding: 0; line-height: 1.8; color: #333;">
+                    <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #007bff;">
+                        <strong>📸 Instagram Post:</strong> 1080px width (Square: 1080x1080, Portrait: 1080x1350)
+                    </li>
+                    <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #28a745;">
+                        <strong>📝 Blog Post / Featured Image:</strong> 1200px width (e.g., 1200x630 for landscape)
+                    </li>
+                    <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #dc3545;">
+                        <strong>📺 YouTube Thumbnail:</strong> 1280x720 pixels (16:9 aspect ratio)
+                    </li>
+                    <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #ffc107;">
+                        <strong>📄 E-commerce Product Image:</strong> 2048x2048 pixels (for zoom functionality)
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                    Frequently Asked Questions (FAQ)
+                </h4>
+                <div style="border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+                    <p><strong>Q: How do I resize an image without changing its aspect ratio?</strong></p>
+                    <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                        A: Our tool has the 'Maintain aspect ratio' option checked by default. Simply enter either the desired width or height, and the other dimension will be calculated automatically to prevent your image from being stretched or distorted.
+                    </p>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                    <p><strong>Q: Will resizing the image reduce its quality?</strong></p>
+                    <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                        A: When you make an image smaller (downscaling), the loss in quality is typically unnoticeable. Our resizer uses a high-quality resampling algorithm to maintain sharpness. However, making a small image much larger (upscaling) can result in some blurriness or pixelation.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- 콘텐츠 끝 -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Imagetool</h3>
+                <p>Professional image processing tools for everyone. Fast, secure, and free to use.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="resizer.html">Image Resizer</a></li>
+                    <li><a href="compressor.html">Image Compressor</a></li>
+                    <li><a href="crop.html">Crop Tool</a></li>
+                    <li><a href="ocr.html">Image to Text</a></li>
+                    <li><a href="colorpicker.html">Color Picker</a></li>
+                    <li><a href="blur.html">Blur Background</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html" >Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imagetool. All rights reserved. | <a href="https://imagetool.info">imagetool.info</a></p>
+        </div>
+    </footer>
+   
+   
+</body>
+</html>

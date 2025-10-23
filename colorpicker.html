@@ -1,0 +1,207 @@
+
+
+<html lang="en">
+<head>
+  <meta name="naver-site-verification" content="c38b0460365da148eff7418479ebd78167805944" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6237171158673362"
+     crossorigin="anonymous"></script>
+<style>
+    .icon-link img {
+        transition: transform 0.3s ease-in-out;
+    }
+    .icon-link:hover img {
+        transform: scale(1.1);
+    }
+</style>
+<style>
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+<style>
+.banner-icon a,
+.banner-icon a:link,
+.banner-icon a:visited,
+.banner-icon a:hover,
+.banner-icon a:active {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+}
+
+.banner-icon a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+}
+</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5B5LK9E72"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J5B5LK9E72');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Color Picker: Find HEX & RGB Codes From Images - Imagetool</title>
+    <meta name="description" content="Instantly find the HEX, RGB, and HSL color codes from any image. Just upload your photo and use our picker to extract the exact colors for your design needs.">
+    <meta name="keywords" content="color picker, color from image, hex code, rgb value, online color picker">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+<!-- (공통) 기능-외부 라이브러리 -->
+<link  rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"   defer></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"         defer></script>
+
+<!-- 여러분의 통합 script -->
+<script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+<a href="index.html" style="text-decoration: none; color: inherit;">
+                    <h1>Imagetool</h1>
+                                        </a>
+                    <span>Professional Image Tools</span>
+                </div>
+                <ul class="nav-menu">
+          <li><a href="resizer.html">Image Resizer</a></li>
+          <li><a href="compressor.html">Image Compressor</a></li>
+          <li><a href="crop.html">Crop Tool</a></li>
+          <li><a href="ocr.html">Image to Text</a></li>
+          <li><a href="colorpicker.html">Color Picker</a></li>
+          <li><a href="blur.html">Blur Background</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+  <section class="tool-section active">
+    <div class="tool-container">
+      <h2>Color Picker</h2>
+
+      <div class="upload-area" id="colorpicker-upload">
+        <p>Click or drag image to pick color</p>
+        <input type="file" id="colorpicker-input" accept="image/*">
+      </div>
+
+      <canvas id="colorpicker-canvas"
+              style="display:none;margin:20px auto;max-width:100%;cursor:crosshair;">
+      </canvas>
+
+      <div id="colorpicker-result" style="margin-top:20px;"></div>
+    </div>
+  </section>
+</main>
+<!-- 콘텐츠 시작: 이 부분을 <main> 태그 바로 다음에 붙여넣으세요 -->
+<section class="content-section" style="padding: 20px 0; font-family: sans-serif;">
+    <div class="tool-container" style="max-width: 800px; margin: 0 auto; padding: 0 15px;">
+        <h3 style="text-align: center; font-size: 2em; margin-bottom: 30px; color: #2c3e50;">
+            A Designer's Guide to Picking Colors from Images
+        </h3>
+        
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                Find Inspiration in Any Image
+            </h4>
+            <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                Ever seen a photograph or a design with a stunning color palette and wished you could use those exact colors in your own project? Our Image Color Picker makes it possible. Simply upload any image, and our tool lets you select any pixel to instantly identify its color code. It’s the perfect utility for web designers, graphic artists, and anyone looking to create harmonious color schemes.
+            </p>
+        </article>
+        
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                Understanding Color Codes: HEX, RGB, and HSL
+            </h4>
+            <p style="line-height: 1.8; color: #333; font-size: 1.1em;">
+                Our tool provides the three most common color code formats used in digital design:
+            </p>
+            <ul style="list-style-type: none; padding: 0; line-height: 1.8; color: #333;">
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #007bff;">
+                    <strong>HEX (Hexadecimal):</strong> The most common format for web design, represented by a # followed by six characters (e.g., #FFFFFF for white). It's the standard for CSS and HTML.
+                </li>
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #28a745;">
+                    <strong>RGB (Red, Green, Blue):</strong> Defines a color by mixing red, green, and blue values, each ranging from 0 to 255. Widely used in digital design and photography (e.g., rgb(255, 255, 255)).
+                </li>
+                <li style="background: #f8f9fa; padding: 15px; margin-bottom: 10px; border-left: 5px solid #dc3545;">
+                    <strong>HSL (Hue, Saturation, Lightness):</strong> An intuitive model where Hue is the color type (like red or blue), Saturation is the intensity, and Lightness is how bright it is. It's great for creating color variations.
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h4 style="font-size: 1.5em; color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px;">
+                How to Use the Color Picker
+            </h4>
+            <div style="border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+                <p><strong>1. Upload Your Image:</strong></p>
+                <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                   Click the upload area and select an image from your device. The image will appear in the canvas.
+                </p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                <p><strong>2. Hover and Click:</strong></p>
+                <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                   Move your mouse cursor over the uploaded image. A preview will show you the exact color under your cursor. Simply click on any point to lock in the color.
+                </p>
+                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                <p><strong>3. Copy the Code:</strong></p>
+                <p style="margin-top: -10px; line-height: 1.8; color: #333; font-size: 1.1em;">
+                   The HEX, RGB, and HSL values for your selected color will be displayed instantly. Click the copy button next to the code you need for your project.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- 콘텐츠 끝 -->
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Imagetool</h3>
+                <p>Professional image processing tools for everyone. Fast, secure, and free to use.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="resizer.html">Image Resizer</a></li>
+                    <li><a href="compressor.html">Image Compressor</a></li>
+                    <li><a href="crop.html">Crop Tool</a></li>
+                    <li><a href="ocr.html">Image to Text</a></li>
+                    <li><a href="colorpicker.html">Color Picker</a></li>
+                    <li><a href="blur.html">Blur Background</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Imagetool. All rights reserved. | <a href="https://imagetool.info">imagetool.info</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

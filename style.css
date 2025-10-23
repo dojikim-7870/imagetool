@@ -1,0 +1,519 @@
+/* General Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Pale blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header & Navigation */
+.navbar {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff; /* Bright blue for logo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo span {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: -5px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #007bff; /* Blue underline on hover */
+    transition: width 0.4s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #007bff;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* ⚠️ 이 미디어 쿼리 블록에 닫는 괄호를 추가하여 오류를 해결했습니다. */
+@media (max-width: 1024px) {
+    /* 내비게이션 메뉴를 위한 코드 */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    /* 카드 섹션 레이아웃을 위한 코드 */
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+
+/* Main Content & Sections */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.tool-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    color: #007bff; /* Bright blue hero title */
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff; /* Bright blue CTA button */
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.cta-btn.secondary {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.cta-btn.secondary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    color: #007bff; /* Bright blue feature card title */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Tool Specific Interface */
+.tool-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.tool-container h2 {
+    font-size: 2.5em;
+    color: #007bff; /* Bright blue tool title */
+    margin-bottom: 10px;
+}
+
+.tool-description {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.upload-area {
+    position: relative;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+}
+.upload-area:hover,
+.upload-area.drag-over {
+    border-color: #007bff; /* Bright blue hover effect */
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.controls label {
+    font-weight: bold;
+    color: #555;
+}
+
+.controls input[type="number"],
+.controls input[type="range"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+}
+
+.process-btn {
+    background-color: #007bff; /* Bright blue process button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.process-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #007bff; /* Bright blue download button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* OCR Specific Styles */
+#ocr-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.result-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result-box pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+/* Color Picker Specific Styles */
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#color-picker-image {
+    max-width: 100%;
+    height: auto;
+    cursor: crosshair;
+}
+
+/* About, Privacy, Terms, Contact Pages */
+.info-section {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.info-section h2 {
+    color: #007bff; /* Bright blue info title */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-section h3 {
+    color: #007bff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+}
+
+.info-section p, .info-section li {
+    font-size: 1em;
+}
+
+.info-section em {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #007bff, #0056b3); /* Blue gradient footer */
+    color: white;
+    border-radius: 15px 15px 0 0;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 15px;
+}
+
+.footer-section h3 {
+    color: #a5d6f8; /* Pale blue for footer titles */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #a5d6f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #a5d6f8;
+    font-size: 0.8em;
+}
+
+.footer-bottom a {
+    color: #a5d6f8;
+    text-decoration: none;
+}
+
+/* Custom styles for the banner icons on index.html */
+.icon-link img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-link:hover img {
+    transform: scale(1.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-icon a,
+.banner-icon a:link,
+.banner-icon a:visited,
+.banner-icon a:hover,
+.banner-icon a:active {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+}
+
+.banner-icon a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+}

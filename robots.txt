@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# 크롤링 방지 경로 (예시: 관리자, 불필요한 파일)
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /private/
+
+# 사이트맵 등록
+Sitemap: https://www.imagetool.info/sitemap.xml
