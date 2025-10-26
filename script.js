@@ -200,32 +200,38 @@ safe(qs("#compressor-input"), () => {
   });
 
   /* ---------------- 7. Color Picker ---------------- */
-  safe(qs("#colorpicker-input"), () => {
-    const $f = qs("#colorpicker-input"), $cv = qs("#colorpicker-canvas"), $out = qs("#colorpicker-result");
-    const ctx = $cv.getContext("2d");
+   safe(qs("#colorpicker-input"), () => {
+    const $f = qs("#colorpicker-input"), $cv = qs("#colorpicker-canvas"), $out = qs("#colorpicker-result");
+    const ctx = $cv.getContext("2d");
 
-    $f.addEventListener("change", e => {
-      const file = e.target.files[0]; if(!file) return;
-      const r = new FileReader();
-      r.onload = ev => {
-        const img = new Image();
-        img.onload = () => {
-          $cv.width = img.width; $cv.height = img.height;
-          ctx.drawImage(img,0,0); $cv.style.display="block";
-         $cv.onclick = p => {
-  const rect = $cv.getBoundingClientRect();
-  const scaleX = $cv.width / rect.width;
-  const scaleY = $cv.height / rect.height;
-  const x = (p.clientX - rect.left) * scaleX;
-  const y = (p.clientY - rect.top) * scaleY;
+    $f.addEventListener("change", e => {
+      const file = e.target.files[0]; if(!file) return;
+      const r = new FileReader();
+      r.onload = ev => {
+        const img = new Image();
+        img.onload = () => {
+          $cv.width = img.width; $cv.height = img.height;
+          ctx.drawImage(img,0,0); $cv.style.display="block";
+         $cv.onclick = p => {
+              const rect = $cv.getBoundingClientRect();
+              const scaleX = $cv.width / rect.width;
+              const scaleY = $cv.height / rect.height;
+              const x = (p.clientX - rect.left) * scaleX;
+              const y = (p.clientY - rect.top) * scaleY;
 
-  const d = ctx.getImageData(x, y, 1, 1).data;
-  const hex = "#" + [d[0], d[1], d[2]].map(x => x.toString(16).padStart(2, "0")).join("");
-  $out.innerHTML = `
-    <div style="width:80px;height:80px;border:1px solid #ccc;border-radius:6px;background:${hex};margin:0 auto"></div>
-    <p style="text-align:center;font-weight:bold;margin-top:8px">${hex.toUpperCase()}</p>
-  `;
-};
+              const d = ctx.getImageData(x, y, 1, 1).data;
+              const hex = "#" + [d[0], d[1], d[2]].map(x => x.toString(16).padStart(2, "0")).join("");
+              $out.innerHTML = `
+                  <div style="width:80px;height:80px;border:1px solid #ccc;border-radius:6px;background:${hex};margin:0 auto"></div>
+                  <p style="text-align:center;font-weight:bold;margin-top:8px">${hex.toUpperCase()}</p>
+              `;
+          }; // <-- $cv.onclick 닫힘
+        }; // <-- img.onload 닫힘
+        img.src = ev.target.result;
+      }; // <-- r.onload 닫힘
+      r.readAsDataURL(file);
+    });
+  });
   /* ---------------- 8. Blur Background ---------------- */
   safe(qs("#blur-input"), () => {
     const $f = qs("#blur-input"), $r = qs("#blur-intensity"), $v = qs("#blur-value");
@@ -257,3 +263,4 @@ safe(qs("#compressor-input"), () => {
   });
 
 });
+
