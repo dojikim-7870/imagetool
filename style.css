@@ -516,4 +516,40 @@ img {
     display: inline-block;
     vertical-align: middle;
     line-height: 0;
+
+}
+.network-card {
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.network-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.network-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.network-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.network-link:hover {
+    text-decoration: underline;
 }
